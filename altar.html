@@ -27,14 +27,85 @@
       <!-- Desktop Navigation -->
       <nav class="main-nav" aria-label="Navigasi Utama">
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Beranda</a></li>
-          <li><a href="profil.html" class="nav-link">Profil & Sejarah</a></li>
-          <li><a href="altar.html" class="nav-link active">Panduan Altar</a></li>
-          <li><a href="epigrafi.html" class="nav-link">Epigrafi & Artefak</a></li>
-          <li><a href="pelayanan.html" class="nav-link">Pelayanan Sosial</a></li>
-          <li><a href="kegiatan.html" class="nav-link">Warta Kegiatan</a></li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Beranda</a>
+          </li>
+          
+          <li class="nav-item has-dropdown">
+            <a href="pelayanan.html" class="nav-link" aria-haspopup="true">
+              Pelayanan Umat <span class="dropdown-chevron">▾</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="has-submenu">
+                <a href="agama_buddha.html" class="dropdown-item">
+                  <span>Bidang Keagamaan</span>
+                  <span class="submenu-chevron">▸</span>
+                </a>
+                <ul class="submenu-menu">
+                  <li><a href="agama_buddha.html" class="dropdown-subitem">Agama Buddha (Vihara Padumuttara)</a></li>
+                  <li><a href="agama_buddha.html#jadwal" class="dropdown-subitem">Jadwal Kebaktian &amp; Meditasi</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="bidang_pendidikan.html" class="dropdown-item">Bidang Pendidikan</a>
+              </li>
+              <li class="has-submenu">
+                <a href="rumah_duka.html" class="dropdown-item">
+                  <span>Bidang Sosial</span>
+                  <span class="submenu-chevron">▸</span>
+                </a>
+                <ul class="submenu-menu">
+                  <li><a href="rumah_duka.html" class="dropdown-subitem">Rumah Duka (Tanah Gocap)</a></li>
+                  <li><a href="tanah_makam.html" class="dropdown-subitem">Tanah Makam (Tanah Cepe)</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li>
+                <a href="pelayanan.html" class="dropdown-item" style="color: #FFD700; font-weight: 600;">Lihat Semua Pelayanan Umat</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-dropdown">
+            <a href="sejarah.html" class="nav-link" aria-haspopup="true">
+              Prosesi 12 Tahunan <span class="dropdown-chevron">▾</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="sejarah.html" class="dropdown-item">Sejarah Gotong Toapekong</a></li>
+              <li><a href="kegiatan.html#prosesi" class="dropdown-item">Dokumentasi &amp; Makna Ritual</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-dropdown">
+            <a href="artikel_klenteng.html" class="nav-link" aria-haspopup="true">
+              Artikel <span class="dropdown-chevron">▾</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="artikel_klenteng.html" class="dropdown-item">Artikel Klenteng (Makna Bio)</a></li>
+              <li><a href="epigrafi.html" class="dropdown-item">Epigrafi &amp; Prasasti Kuno (1684-1835)</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="altar.html" class="nav-link active">Tata Altar</a>
+          </li>
+
+          <li class="nav-item has-dropdown">
+            <a href="profil.html" class="nav-link" aria-haspopup="true">
+              Profil <span class="dropdown-chevron">▾</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="profil.html#sejarah" class="dropdown-item">Riwayat Sejarah 1684</a></li>
+              <li><a href="profil.html#perkumpulan" class="dropdown-item">Perkumpulan Boen Tek Bio</a></li>
+              <li><a href="profil.html#pktb" class="dropdown-item">Pusat Kajian Tionghoa Benteng (PKTB)</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="https://pktblib.boentekbio.or.id/" target="_blank" rel="noopener noreferrer" class="nav-link" title="Perpustakaan Digital PKTB">PKTB Digital ↗</a>
+          </li>
         </ul>
-        <a href="pelayanan.html#layanan-duka" class="nav-cta-emergency">Layanan Duka 24 Jam</a>
+        <a href="tel:0215522434" class="nav-cta-emergency">Layanan Duka 24 Jam</a>
       </nav>
 
       <!-- Mobile Toggle Button -->
@@ -44,7 +115,7 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
+  <!-- Mobile Drawer Menu (with Accordion) -->
   <div class="mobile-drawer" aria-hidden="true">
     <div class="mobile-panel">
       <div class="mobile-panel-header">
@@ -54,17 +125,90 @@
         </div>
         <button class="mobile-drawer-close" aria-label="Tutup menu navigasi">✕</button>
       </div>
+
       <ul class="mobile-nav-list">
-        <li><a href="index.html" class="mobile-nav-link">Beranda</a></li>
-        <li><a href="profil.html" class="mobile-nav-link">Profil & Sejarah</a></li>
-        <li><a href="altar.html" class="mobile-nav-link active">Panduan Altar & Sembahyang</a></li>
-        <li><a href="epigrafi.html" class="mobile-nav-link">Epigrafi & Artefak Kuno</a></li>
-        <li><a href="pelayanan.html" class="mobile-nav-link">Pelayanan Sosial & Duka</a></li>
-        <li><a href="kegiatan.html" class="mobile-nav-link">Warta Kegiatan</a></li>
+        <li class="mobile-nav-item">
+          <a href="index.html" class="mobile-nav-link">Beranda</a>
+        </li>
+
+        <li class="mobile-nav-item">
+          <div class="mobile-nav-row">
+            <a href="pelayanan.html" class="mobile-nav-link">Pelayanan Umat</a>
+            <button class="mobile-accordion-toggle" aria-label="Buka submenu Pelayanan Umat" aria-expanded="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </div>
+          <ul class="mobile-submenu">
+            <li class="mobile-nested-group">
+              <span class="mobile-nested-title">Bidang Keagamaan</span>
+              <a href="agama_buddha.html" class="mobile-sub-link">Agama Buddha (Vihara Padumuttara)</a>
+              <a href="agama_buddha.html#jadwal" class="mobile-sub-link">Jadwal Kebaktian &amp; Meditasi</a>
+            </li>
+            <li class="mobile-nested-group">
+              <span class="mobile-nested-title">Bidang Pendidikan</span>
+              <a href="bidang_pendidikan.html" class="mobile-sub-link">Universitas &amp; Sekolah Buddhi</a>
+            </li>
+            <li class="mobile-nested-group">
+              <span class="mobile-nested-title">Bidang Sosial</span>
+              <a href="rumah_duka.html" class="mobile-sub-link">Rumah Duka (Tanah Gocap)</a>
+              <a href="tanah_makam.html" class="mobile-sub-link">Tanah Makam (Tanah Cepe)</a>
+            </li>
+            <li><a href="pelayanan.html" class="mobile-sub-link" style="color: #FFD700; font-weight: 600;">Lihat Semua Pelayanan Umat →</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item">
+          <div class="mobile-nav-row">
+            <a href="sejarah.html" class="mobile-nav-link">Prosesi 12 Tahunan</a>
+            <button class="mobile-accordion-toggle" aria-label="Buka submenu Prosesi" aria-expanded="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </div>
+          <ul class="mobile-submenu">
+            <li><a href="sejarah.html" class="mobile-sub-link">Sejarah Gotong Toapekong</a></li>
+            <li><a href="kegiatan.html#prosesi" class="mobile-sub-link">Dokumentasi &amp; Makna Ritual</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item">
+          <div class="mobile-nav-row">
+            <a href="artikel_klenteng.html" class="mobile-nav-link">Artikel &amp; Kajian</a>
+            <button class="mobile-accordion-toggle" aria-label="Buka submenu Artikel" aria-expanded="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </div>
+          <ul class="mobile-submenu">
+            <li><a href="artikel_klenteng.html" class="mobile-sub-link">Artikel Klenteng (Makna Bio)</a></li>
+            <li><a href="epigrafi.html" class="mobile-sub-link">Epigrafi &amp; Prasasti Kuno (1684-1835)</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="altar.html" class="mobile-nav-link active">Panduan Tata Altar</a>
+        </li>
+
+        <li class="mobile-nav-item">
+          <div class="mobile-nav-row">
+            <a href="profil.html" class="mobile-nav-link">Profil &amp; Sejarah</a>
+            <button class="mobile-accordion-toggle" aria-label="Buka submenu Profil" aria-expanded="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </div>
+          <ul class="mobile-submenu">
+            <li><a href="profil.html#sejarah" class="mobile-sub-link">Riwayat Sejarah 1684</a></li>
+            <li><a href="profil.html#perkumpulan" class="mobile-sub-link">Perkumpulan Boen Tek Bio</a></li>
+            <li><a href="profil.html#pktb" class="mobile-sub-link">Pusat Kajian Tionghoa Benteng</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="https://pktblib.boentekbio.or.id/" target="_blank" rel="noopener noreferrer" class="mobile-nav-link" style="color: #FFD700;">Perpustakaan PKTB ↗</a>
+        </li>
       </ul>
-      <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border);">
-        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 0.5rem;">Layanan Duka & Ambulans 24 Jam:</p>
-        <a href="tel:0215522434" class="btn btn-primary" style="width: 100%;">(021) 552-2434</a>
+
+      <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.2);">
+        <p style="font-size: 0.8125rem; color: #FFE5B4; margin-bottom: 0.5rem;">Layanan Duka &amp; Ambulans 24 Jam:</p>
+        <a href="tel:0215522434" class="btn btn-primary" style="width: 100%; font-size: 0.9rem;">(021) 552-2434</a>
       </div>
     </div>
   </div>

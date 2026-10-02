@@ -9,12 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initAltarFilter();
 });
 
-/* 1. Mobile Drawer Navigation */
+/* 1. Mobile Drawer Navigation & Accordion Controls */
 function initMobileNav() {
   const toggleBtn = document.querySelector('.mobile-toggle');
   const drawer = document.querySelector('.mobile-drawer');
   const closeBtn = document.querySelector('.mobile-drawer-close');
-  const navLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (!toggleBtn || !drawer) return;
 
@@ -44,7 +43,28 @@ function initMobileNav() {
     }
   });
 
-  navLinks.forEach((link) => {
+  // Mobile Accordion toggles
+  const accordionToggles = drawer.querySelectorAll('.mobile-accordion-toggle');
+  accordionToggles.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = btn.classList.contains('expanded');
+      btn.classList.toggle('expanded', !isExpanded);
+      btn.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
+
+      const parentItem = btn.closest('.mobile-nav-item');
+      if (parentItem) {
+        const subMenu = parentItem.querySelector('.mobile-submenu');
+        if (subMenu) {
+          subMenu.classList.toggle('open', !isExpanded);
+        }
+      }
+    });
+  });
+
+  // Clicking any nav link in drawer navigates and closes drawer
+  const allDrawerLinks = drawer.querySelectorAll('a');
+  allDrawerLinks.forEach((link) => {
     link.addEventListener('click', closeDrawer);
   });
 
@@ -52,6 +72,21 @@ function initMobileNav() {
     if (e.key === 'Escape' && drawer.classList.contains('open')) {
       closeDrawer();
     }
+  });
+
+  // Desktop touch support for dropdowns
+  const desktopDropdownLinks = document.querySelectorAll('.nav-item.has-dropdown > .nav-link');
+  desktopDropdownLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth > 1080 && ('ontouchstart' in window || navigator.maxTouchPoints > 0)) {
+        const parent = link.closest('.nav-item');
+        if (parent && !parent.classList.contains('touch-open')) {
+          e.preventDefault();
+          document.querySelectorAll('.nav-item.touch-open').forEach((p) => p.classList.remove('touch-open'));
+          parent.classList.add('touch-open');
+        }
+      }
+    });
   });
 }
 
