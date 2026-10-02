@@ -48,7 +48,12 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: 75px;
   -webkit-text-size-adjust: 100%;
+}
+
+[id] {
+  scroll-margin-top: 75px;
 }
 
 body {
@@ -1067,6 +1072,235 @@ img {
   color: #9E9385;
 }
 
+/* Split Layout Grids */
+.content-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.content-split-grid.reverse-order > figure:first-child {
+  order: 2;
+}
+
+.content-split-grid.reverse-order > div:last-child {
+  order: 1;
+}
+
+.content-split-grid.align-start {
+  align-items: start;
+}
+
+.content-split-grid.ratio-2-1 {
+  grid-template-columns: 2fr 1fr;
+}
+
+.content-split-grid.ratio-1-1-2 {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.content-split-figure {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: var(--shadow-subtle);
+}
+
+.content-split-figure img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.content-split-figure figcaption {
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--border);
+  line-height: 1.45;
+}
+
+/* Article Rich Card */
+.article-rich-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-subtle);
+  line-height: 1.8;
+}
+
+/* Institution Card */
+.institution-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 2rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.institution-card-fig {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.institution-card-fig img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Taxonomy Grid */
+.taxonomy-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.taxonomy-card {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+}
+
+/* Form Grid */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Action Buttons / Button Groups */
+.btn-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+/* Table Responsive Wrapper & Schedule Table */
+.table-responsive-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  box-shadow: var(--shadow-subtle);
+  margin-bottom: 1.5rem;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  text-align: left;
+  min-width: 580px;
+}
+
+.schedule-table th {
+  background-color: #8B0000;
+  color: #FFFFFF;
+  padding: 0.875rem 1.25rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.schedule-table td {
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.schedule-table tr:nth-child(even) td {
+  background-color: var(--bg-subtle);
+}
+
+.table-scroll-hint {
+  display: none;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+  margin-bottom: 0.35rem;
+}
+
+/* Epigrafi Components */
+.epigrafi-detail-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 2rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.epigrafi-rubbing-box {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-subtle);
+}
+
+.epigrafi-rubbing-box img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.epigrafi-meta-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.epigrafi-meta-table th {
+  width: 35%;
+  text-align: left;
+  padding: 0.5rem 0.75rem 0.5rem 0;
+  color: var(--primary-dark);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+}
+
+.epigrafi-meta-table td {
+  padding: 0.5rem 0;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Altar Filter Active State */
+.altar-filter-btn.active {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+  font-weight: 600;
+}
+
 /* --- 9. Mobile Responsive Media Queries --- */
 @media (max-width: 1080px) {
   .main-nav {
@@ -1077,9 +1311,65 @@ img {
   }
   .card-grid-4 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .card-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .card-grid-3 > :last-child:nth-child(odd) {
+    grid-column: span 2;
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .content-split-grid,
+  .content-split-grid.ratio-2-1,
+  .content-split-grid.ratio-1-1-2 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .content-split-grid.reverse-order > figure:first-child {
+    order: 0;
+  }
+
+  .content-split-grid.reverse-order > div:last-child {
+    order: 0;
+  }
+
+  .content-split-figure img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    max-height: 300px;
+  }
+
+  .institution-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .institution-card-fig img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    max-height: 240px;
+  }
+
+  .epigrafi-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .epigrafi-rubbing-box img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    max-height: 240px;
   }
 }
 
@@ -1106,16 +1396,21 @@ img {
   }
   
   .card-grid-3, .card-grid-2, .card-grid-4, .directory-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+  }
+
+  .card-grid-3 > :last-child:nth-child(odd) {
+    grid-column: auto;
   }
   
+  .taxonomy-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   .timeline-record {
     grid-template-columns: 1fr;
     gap: 0.5rem;
-  }
-  
-  .epigrafi-detail-grid {
-    grid-template-columns: 1fr;
   }
   
   .footer-grid {
@@ -1128,13 +1423,38 @@ img {
     padding-bottom: 2.25rem;
   }
 
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
+  .article-rich-card {
+    padding: 1.5rem 1.25rem;
   }
 
-  .hero-actions .btn {
+  .table-scroll-hint {
+    display: block;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.625rem;
+  }
+
+  .btn-group .btn {
     width: 100%;
+    margin-left: 0 !important;
+    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -1144,18 +1464,52 @@ img {
     padding-right: 1rem;
   }
 
+  .header-inner {
+    height: 54px;
+    gap: 0.5rem;
+  }
+
+  .brand-logo-img {
+    height: 36px;
+  }
+
+  .brand-text h1, .brand-text .brand-title {
+    font-size: 0.95rem;
+  }
+
+  .brand-text .brand-subtitle {
+    font-size: 0.5625rem;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mobile-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
 
   .hero-main-title {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
     line-height: 1.2;
   }
 
+  .article-rich-card {
+    padding: 1.25rem 0.875rem;
+  }
+
+  .institution-card {
+    padding: 1.25rem 0.875rem;
+  }
+
   .mobile-panel {
-    width: 95%;
-    max-width: 100%;
-    padding: 1rem;
+    width: 92%;
+    max-width: 320px;
+    padding: 1rem 0.875rem;
   }
 }

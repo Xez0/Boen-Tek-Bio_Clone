@@ -229,24 +229,24 @@
     <!-- Main Content Section -->
     <section class="section">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3.5rem;">
+        <div class="content-split-grid">
           <div>
             <span class="section-kicker">Pusat Peribadatan Tridharma & Buddhis</span>
-            <h2>Vihara Padumuttara (Pasar Lama)</h2>
+            <h2 style="font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: 0.75rem;">Vihara Padumuttara (Pasar Lama)</h2>
             <p>
               Berada menyatu dalam naungan kompleks Klenteng Boen Tek Bio di Jalan Bhakti No. 14 Pasar Lama Tangerang, Vihara Padumuttara menjadi ruang puja bakti yang membina umat Buddha lintas generasi. Dari kebaktian remaja, pemuda, orang tua, hingga pemberkatan perkawinan secara Buddhis.
             </p>
             <p>
               Vihara Padumuttara menyelenggarakan pembinaan Dhamma yang berlandaskan cinta kasih (metta), welas asih (karuna), dan kebijaksanaan (panna), bersinergi erat dengan tradisi kearifan Tridharma Peranakan Tionghoa Benteng.
             </p>
-            <div style="margin-top: 1.25rem;">
+            <div class="btn-group">
               <a href="#jadwal" class="btn btn-primary">Lihat Jadwal Kebaktian</a>
-              <a href="https://www.padumuttara.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-left: 0.5rem;">Situs Padumuttara ↗</a>
+              <a href="https://www.padumuttara.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Situs Padumuttara ↗</a>
             </div>
           </div>
-          <figure style="border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; background: #FFFFFF;">
-            <img src="images/7eOPTtykHSZX5xgOUV1g7HtHdINeCEq08rkkJgLQ.jpg" alt="Altar Utama Vihara Padumuttara Klenteng Boen Tek Bio" style="width: 100%; height: 380px; object-fit: cover;">
-            <figcaption style="padding: 0.5rem 0.875rem; font-size: 0.8125rem; color: var(--text-muted); background: var(--bg-subtle); border-top: 1px solid var(--border);">
+          <figure class="content-split-figure">
+            <img src="images/7eOPTtykHSZX5xgOUV1g7HtHdINeCEq08rkkJgLQ.jpg" alt="Altar Utama Vihara Padumuttara Klenteng Boen Tek Bio">
+            <figcaption>
               Ruang Dharmasala dan pemujaan utama di kompleks Klenteng Boen Tek Bio Tangerang.
             </figcaption>
           </figure>
@@ -262,14 +262,15 @@
             </p>
           </div>
 
-          <div style="overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--border); border-radius: var(--radius-sm); background: #FFFFFF;">
-            <table style="width: 100%; border-collapse: collapse; font-size: 0.9375rem; text-align: left;">
+          <div class="table-scroll-hint">⟷ Geser tabel secara horizontal untuk melihat semua kolom</div>
+          <div class="table-responsive-wrapper">
+            <table class="schedule-table">
               <thead>
-                <tr style="background-color: #8B0000; color: #FFFFFF;">
-                  <th style="padding: 0.875rem 1.25rem; font-weight: 600;">Hari</th>
-                  <th style="padding: 0.875rem 1.25rem; font-weight: 600;">Waktu</th>
-                  <th style="padding: 0.875rem 1.25rem; font-weight: 600;">Nama Kegiatan & Kebaktian</th>
-                  <th style="padding: 0.875rem 1.25rem; font-weight: 600;">Sasaran Peserta</th>
+                <tr>
+                  <th>Hari</th>
+                  <th>Waktu</th>
+                  <th>Nama Kegiatan &amp; Kebaktian</th>
+                  <th>Sasaran Peserta</th>
                 </tr>
               </thead>
               <tbody>
